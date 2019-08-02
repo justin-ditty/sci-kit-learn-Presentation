@@ -11,6 +11,7 @@ in the scikit-learn package.
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn import preprocessing
+from sklearn.model_selection import train_test_split
 
 data = pd.read_csv("Preprocessing/auto-mpgdata.csv", 
                        header = 1, names = ["mpg", 
@@ -60,7 +61,6 @@ plt.ylabel("Fuel Economy (MPG)")
 
 # The train_test_split module makes it easy to divide the dataset into training 
 # and testing subsets
-from sklearn.model_selection import train_test_split
 features_train, features_test, target_train, target_test = train_test_split(
         features, target, test_size = .2, random_state = 0)
 
